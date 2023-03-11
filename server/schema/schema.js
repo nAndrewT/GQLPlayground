@@ -39,7 +39,7 @@ const RootQuery = new GraphQLObjectType({
 			args: { id: { type: GraphQLString } },
 			resolve(parent, args) {
 				return fetch(
-					`https://newsdata.io/api/1/news?apikey=pub_17860d5d4de387f07197443f4724ec938c4f9&country=${args}`,
+					`https://newsdata.io/api/1/news?apikey=pub_17860d5d4de387f07197443f4724ec938c4f9&country=${args.id}`,
 					{
 						headers: {
 							API_key: "pub_17860d5d4de387f07197443f4724ec938c4f9",

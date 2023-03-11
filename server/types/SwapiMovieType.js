@@ -8,7 +8,7 @@ const SwapiMovieType = new GraphQLObjectType({
 		producer: { type: GraphQLString },
 		// peoples is not a valid attribute of swapi/films
 		// returns null in graphiql
-		peoples: { type: GraphQLString },
+		// peoples: { type: GraphQLString },
 	}),
 });
 
