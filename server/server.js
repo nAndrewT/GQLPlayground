@@ -17,20 +17,20 @@ app.use(
 		graphiql: true,
 		extensions: ({ document, variables, operationName, result }) => {
 			console.log("result data: ", result);
-			fetch("http://localhost:3000/queryRespReceiver", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-					// 'Content-Type': 'application/x-www-form-urlencoded',
-				},
-				body: JSON.stringify({ schema: schema, queryResp: result }),
-			})
-				.then((data) => {
-					return data.json();
-				})
-				.then((resp) => {
-					console.log("resp: ", resp);
-				});
+			// fetch("http://localhost:3000/queryRespReceiver", {
+			// 	method: "POST",
+			// 	headers: {
+			// 		"Content-Type": "application/json",
+			// 		// 'Content-Type': 'application/x-www-form-urlencoded',
+			// 	},
+			// 	body: JSON.stringify({ schema: schema, queryResp: result }),
+			// })
+			// 	.then((data) => {
+			// 		return data.json();
+			// 	})
+			// 	.then((resp) => {
+			// 		console.log("resp: ", resp);
+			// 	});
 		},
 	})
 );
